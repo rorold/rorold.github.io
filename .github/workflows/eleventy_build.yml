@@ -1,33 +1,4 @@
 name: Eleventy Build
-
-# on: [push]
-
-# jobs:
-  # build_deploy:
-    # runs-on: ubuntu-latest
-    # steps:
-      # - uses: actions/checkout@master
-      
-#      - name: Use Node.js
-#        uses: actions/setup-node@v4
-#        with:
-#          node-version: '22.x'
-#          
-#      - name: Build
-#        uses: TartanLlama/actions-eleventy@master
-#        with:
-#          install_dependencies: true
-#        
-      # - name: Deploy
-        # uses: peaceiris/actions-gh-pages@v3
-        # with:
-          # publish_dir: _site 
-          # publish_branch: gh-pages
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          # cname: rpfmorrison.co.uk
-
-# name: Build and Deploy
-
 on:
   push:
     branches: ['master']
@@ -55,8 +26,9 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Run npm build
-        run: npm run build:prod
+      - name: Run npx build
+        run: npx @11ty/eleventy
+   #     run: npm run build:prod
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
