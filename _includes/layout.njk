@@ -1,5 +1,7 @@
 ---
-title: My Rad Blog
+title: R. P. F. Morrison, Luthier.
+
+footer: <p>Copyright © Rory Morrison 2025</p><p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
 ---
 
 <!doctype html>
@@ -7,9 +9,21 @@ title: My Rad Blog
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ title }}</title>	
+	<style>{% include "bundle.css" %}</style>
   </head>
   <body>
+    <nav>
+      <h2 class="visually-hidden">Top level navigation menu</h2>
+      <ul class="nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
     {{ content | safe }}
+	
+	
+	{{footer | safe}}
   </body>
 </html>
