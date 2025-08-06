@@ -27,8 +27,7 @@ jobs:
         run: npm ci
 
       - name: Run npx build
-        run: npx @11ty/eleventy
-   #     run: npm run build:prod
+        run: npm run build-ghpages
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
@@ -37,4 +36,3 @@ jobs:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           cname: rpfmorrison.co.uk
- #         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
