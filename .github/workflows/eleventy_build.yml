@@ -1,12 +1,12 @@
 name: Eleventy Build
-on: [push]
 
-jobs:
-  build_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      
+# on: [push]
+
+# jobs:
+  # build_deploy:
+    # runs-on: ubuntu-latest
+    # steps:
+      # - uses: actions/checkout@master
       
 #      - name: Use Node.js
 #        uses: actions/setup-node@v4
@@ -17,11 +17,52 @@ jobs:
 #        uses: TartanLlama/actions-eleventy@master
 #        with:
 #          install_dependencies: true
-        
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+#        
+      # - name: Deploy
+        # uses: peaceiris/actions-gh-pages@v3
+        # with:
+          # publish_dir: _site 
+          # publish_branch: gh-pages
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          # cname: rpfmorrison.co.uk
+
+# name: Build and Deploy
+
+on:
+  push:
+    branches: ['master']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: ['22']
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run npm build
+        run: npm run build:prod
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           publish_dir: _site 
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           cname: rpfmorrison.co.uk
+ #         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
