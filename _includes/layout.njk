@@ -1,7 +1,6 @@
 ---
 title: R. P. F. Morrison, Luthier.
-
-footer: <p>Copyright © Rory Morrison 2025</p><p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+border: <img class="leftborder" loading="lazy" decoding="async" src="/img/border2.jpg" alt="decorative border"/>
 ---
 
 <!doctype html>
@@ -13,17 +12,28 @@ footer: <p>Copyright © Rory Morrison 2025</p><p>Hosted with GitHub Pages, built
 	<style>{% include "bundle.css" %}</style>
   </head>
   <body>
-    <nav>
-      <h2 class="visually-hidden">Top level navigation menu</h2>
-      <ul class="nav">
-        {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-        {%- endfor %}
-      </ul>
-    </nav>
-    {{ content | safe }}
+
+      <h1 class="header"> {{ title }} </h1>
 	
-	
-	{{footer | safe}}
+      <nav>
+        <h2 class="visually-hidden">Top level navigation menu</h2>
+        <ul class="nav">
+          {%- for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+
+	<div class="leftborder">
+	  {{border | safe }}
+	  <div>
+      {{ content | safe }}
+	  </div>
+	</div>
+	<div class="footer">
+	  <p>Copyright © Rory Morrison 2025</p>
+	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+	  <p>Border image taken from <a href="http://www.godecookery.com/clipart/borders/clbord.htm">godecookery.com</a> </p>
+	</div>
   </body>
 </html>
