@@ -1,3 +1,9 @@
+/* Defaults */
+:root {
+	--font-family: "IM Fell English", "Times New Roman", Times, serif;
+}
+
+
 /* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
