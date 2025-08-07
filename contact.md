@@ -6,4 +6,4 @@ eleventyNavigation:
 layout: layout.njk
 ---
 
-It is possible to contact me, but not here as this site is work in progress.
+Find me on instagram <a href="https://www.instagram.com/rpf_morrison/">@rpf_morrison</a> or email me at rpfmorrison at gmail dot com
