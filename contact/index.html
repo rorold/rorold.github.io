@@ -5,7 +5,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R. P. F. Morrison, Luthier.</title>	
-	<style>/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+	<style>/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden:not(:focus):not(:active) {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -23,6 +89,8 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
+    align-items: center;
+    justify-content: center
 }
 .nav-item {
 	display: inline-block;
@@ -33,22 +101,49 @@
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
 }
+
+.header {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+
+/* Left border */
+.leftborder {
+  display: flex;
+  gap: .5em 1em;
+  align-items: left;
+  justify-content: left;
+}
 </style>
   </head>
   <body>
-    <nav>
-      <h2 class="visually-hidden">Top level navigation menu</h2>
-      <ul class="nav">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item"><a href="/about">About</a></li>
-        <li class="nav-item"><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>Contact</h1>
-<p>It is possible to contact me</p>
 
+      <h1 class="header"> R. P. F. Morrison, Luthier. </h1>
 	
-	
-	<p>Copyright © Rory Morrison 2025</p><p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+      <nav>
+        <h2 class="visually-hidden">Top level navigation menu</h2>
+        <ul class="nav">
+          <li class="nav-item"><a href="/">Home</a></li>
+          <li class="nav-item"><a href="/about/">About</a></li>
+          <li class="nav-item"><a href="/contact/" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+	<div class="leftborder">
+	  <img class="leftborder" loading="lazy" decoding="async" src="/img/border2.jpg" alt="decorative border"/>
+	  <div>
+      <p>It is possible to contact me, but not here as this site is work in progress.</p>
+
+	  </div>
+	</div>
+	<div class="footer">
+	  <p>Copyright © Rory Morrison 2025</p>
+	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+	  <p>Border image taken from <a href="http://www.godecookery.com/clipart/borders/clbord.htm">godecookery.com</a> </p>
+	</div>
   </body>
 </html>
