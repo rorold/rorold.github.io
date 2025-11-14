@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
   key: About
-  order: 2
+  order: 4
   
 layout: layout.njk
 ---
