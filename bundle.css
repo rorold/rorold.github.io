@@ -62,13 +62,12 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	max-width: 40em;
 }
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
-}
+
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden:not(:focus):not(:active) {
@@ -104,6 +103,9 @@ body {
 .header {
   text-align: center;
 }
+.subheader {
+  text-align: center;
+}
 
 .footer {
   text-align: center;
@@ -112,8 +114,20 @@ body {
 
 /* Left border */
 .leftborder {
-  display: flex;
+  display: inline-block;
   gap: .5em 1em;
   align-items: left;
+  vertical-align:top;
   justify-content: left;
+  width: 3.5em;
+}
+
+/* page content */
+.pagecontent{
+  display: inline-block;
+  gap: .5em 1em;
+  align-items: left;
+  vertical-align:top;
+  justify-content: left;
+  width: 35em;
 }

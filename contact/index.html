@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 	
 	
-    <title>R. P. F. Morrison, Luthier.</title>	
+    <title>R. P. F. Morrison</title>	
 	<style>/* Defaults */
 :root {
 	--font-family: "IM Fell English", "Times New Roman", Times, serif;
@@ -75,13 +75,12 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	max-width: 40em;
 }
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
-}
+
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden:not(:focus):not(:active) {
@@ -117,6 +116,9 @@ body {
 .header {
   text-align: center;
 }
+.subheader {
+  text-align: center;
+}
 
 .footer {
   text-align: center;
@@ -125,37 +127,52 @@ body {
 
 /* Left border */
 .leftborder {
-  display: flex;
+  display: inline-block;
   gap: .5em 1em;
   align-items: left;
+  vertical-align:top;
   justify-content: left;
+  width: 3.5em;
+}
+
+/* page content */
+.pagecontent{
+  display: inline-block;
+  gap: .5em 1em;
+  align-items: left;
+  vertical-align:top;
+  justify-content: left;
+  width: 35em;
 }
 </style>
   </head>
   <body>
-
-      <h1 class="header"> R. P. F. Morrison, Luthier. </h1>
-	
-      <nav>
-        <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav">
-          <li class="nav-item"><a href="/">Home</a></li>
-          <li class="nav-item"><a href="/about/">About</a></li>
-          <li class="nav-item"><a href="/contact/" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-
+    <h1 class="header"> R. P. F. Morrison </h1>
+	<h3 class="subheader"> Folk and Early Stringed Instruments </h1>
+    <nav>
+	  <h2 class="visually-hidden">Top level navigation menu</h2>
+	  <ul class="nav">
+	    <li class="nav-item"><a href="/">Home</a></li>
+	    <li class="nav-item"><a href="/about/">About</a></li>
+	    <li class="nav-item"><a href="/contact/" aria-current="page">Contact</a></li>
+	  </ul>
+	</nav>
+	  
 	<div class="leftborder">
-	  <img class="leftborder" loading="lazy" decoding="async" src="/img/border2.jpg" alt="decorative border"/>
-	  <div>
-      <p>Find me on instagram <a href="https://www.instagram.com/rpf_morrison/">@rpf_morrison</a> or email me at rpfmorrison at gmail dot com</p>
-
-	  </div>
+	  <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 	</div>
+
+	<div class="pagecontent">
+      
+
+	    <p>Find me on instagram <a href="https://www.instagram.com/rpf_morrison/">@rpf_morrison</a> or email me at rpfmorrison at gmail dot com</p>
+
+
+	</div>
+	
 	<div class="footer">
 	  <p>Copyright © Rory Morrison 2025</p>
 	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
-	  <p>Border image taken from <a href="http://www.godecookery.com/clipart/borders/clbord.htm">godecookery.com</a> </p>
 	</div>
   </body>
 </html>
