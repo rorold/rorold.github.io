@@ -1,6 +1,7 @@
 ---
-title: R. P. F. Morrison, Luthier.
-border: <img class="leftborder" loading="lazy" decoding="async" src="/img/border2.jpg" alt="decorative border"/>
+title: R. P. F. Morrison
+subtitle: Folk and Early Stringed Instruments
+border: <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 ---
 
 <!doctype html>
@@ -18,28 +19,31 @@ border: <img class="leftborder" loading="lazy" decoding="async" src="/img/border
 	<style>{% include "bundle.css" %}</style>
   </head>
   <body>
-
-      <h1 class="header"> {{ title }} </h1>
-	
-      <nav>
-        <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="nav">
-          {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </nav>
-
+    <h1 class="header"> {{ title }} </h1>
+	<h3 class="subheader"> {{ subtitle }} </h1>
+    <nav>
+	  <h2 class="visually-hidden">Top level navigation menu</h2>
+	  <ul class="nav">
+	    {%- for entry in collections.all | eleventyNavigation %}
+	    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+	    {%- endfor %}
+	  </ul>
+	</nav>
+	  
 	<div class="leftborder">
 	  {{border | safe }}
-	  <div>
-      {{ content | safe }}
-	  </div>
 	</div>
+
+	<div class="pagecontent">
+      
+
+	    {{ content | safe }}
+
+	</div>
+	
 	<div class="footer">
 	  <p>Copyright © Rory Morrison 2025</p>
 	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
-	  <p>Border image taken from <a href="http://www.godecookery.com/clipart/borders/clbord.htm">godecookery.com</a> </p>
 	</div>
   </body>
 </html>
