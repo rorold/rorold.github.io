@@ -21,18 +21,47 @@ border: <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_b
   <body>
     <h1 class="header"> {{ title }} </h1>
 	<h3 class="subheader"> {{ subtitle }} </h1>
-    <nav>
-	  <h2 class="visually-hidden">Top level navigation menu</h2>
-	  <ul class="nav">
-	    {%- for entry in collections.all | eleventyNavigation %}
-	    <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-	    {%- endfor %}
-	  </ul>
-	</nav>
+  <nav>
+    <h2 class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+      {% set navPages = collections.all | eleventyNavigation %}
+      
+      
+        {% macro renderNavSubListItem(entry) %}
+          <li class="nav-sub-item"><a href="{{ entry.url }}"{% if entry.url == page.url or entry.parent.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+        {%- endmacro %}
+
+
+
+        {% macro renderNavListItem(entry) %}
+        
+          {% if entry.children.length %}
+          
+            <div class="dropdown">
+              <li class="nav-item">{{ entry.title }}</li>
+              
+              <div class="dropdown-content">
+                {%- for child in entry.children %}{{ renderNavSubListItem(child) }}{% endfor -%}
+              </div>
+            </div>
+          
+          {% else %}
+            <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url or entry.parent.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+          {% endif %}
+        {%- endmacro %}
+    
+      {%- for entry in navPages %}
+        {{ renderNavListItem(entry) }}
+      {%- endfor %}
+    </ul>
+  </nav>
 	  
 	<div class="leftborder">
 	  {{border | safe }}
 	</div>
+
+
+
 
 	<div class="pagecontent">
       
