@@ -109,9 +109,58 @@ html {
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
+
+.nav-sub-item {
+	display: block;
+}
+.nav-sub-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+.nav-sub-item:hover {
+  text-decoration: underline;
+}
+
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
 }
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a[href]:not(:hover) {
+	text-decoration: none;
+}
+
+.dropdown-content a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
 
 .header {
   text-align: center;
@@ -149,27 +198,64 @@ html {
   <body>
     <h1 class="header"> R. P. F. Morrison </h1>
 	<h3 class="subheader"> Folk and Early Stringed Instruments </h1>
-    <nav>
-	  <h2 class="visually-hidden">Top level navigation menu</h2>
-	  <ul class="nav">
-	    <li class="nav-item"><a href="/">Home</a></li>
-	    <li class="nav-item"><a href="/instruments/" aria-current="page">Instruments</a></li>
-	    <li class="nav-item"><a href="/repairs/">Repairs</a></li>
-	    <li class="nav-item"><a href="/about/">About</a></li>
-	    <li class="nav-item"><a href="/contact/">Contact</a></li>
-	  </ul>
-	</nav>
+  <nav>
+    <h2 class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+      
+      
+      
+        
+
+
+
+        
+        
+        
+          
+            <li class="nav-item"><a href="/">Home</a></li>
+          
+        
+        
+          
+          
+            <div class="dropdown">
+              <li class="nav-item">Instruments</li>
+              
+              <div class="dropdown-content">
+          <li class="nav-sub-item"><a href="/octavemandolin/">Octave Mandolin</a></li>
+          <li class="nav-sub-item"><a href="/viol/">Viol</a></li></div>
+            </div>
+          
+          
+        
+        
+          
+            <li class="nav-item"><a href="/repairs/">Repairs</a></li>
+          
+        
+        
+          
+            <li class="nav-item"><a href="/about/">About</a></li>
+          
+        
+        
+          
+            <li class="nav-item"><a href="/contact/">Contact</a></li>
+          
+    </ul>
+  </nav>
 	  
 	<div class="leftborder">
 	  <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 	</div>
 
+
+
+
 	<div class="pagecontent">
       
 
-	    <p>I have made a bass viol, after a 1624 Henry Jaye, and a simple rebec. I am currently working on a guitar-bodied octave mandolin.</p>
-<p>Below is a work-in-progress photo of my bass viol as I was tying the frets.</p>
-<img loading="lazy" decoding="async" src="/img/viol_wip.jpg" alt="Work in progress on a bass viol" width="450"/>
+	    
 
 	</div>
 	
