@@ -38,7 +38,7 @@ border: <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_b
           {% if entry.children.length %}
           
             <div class="dropdown">
-              <li class="nav-item">{{ entry.title }}</li>
+             {{ entry.title }}
               
               <div class="dropdown-content">
                 {%- for child in entry.children %}{{ renderNavSubListItem(child) }}{% endfor -%}

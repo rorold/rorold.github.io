@@ -143,6 +143,9 @@ html {
   display: block;
 }
 
+.dropdown:hover {
+  text-decoration: underline;
+}
 
 
 
