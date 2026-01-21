@@ -148,7 +148,23 @@ html {
 }
 
 
+/* Lightbox gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin:  0;
+}
 
+.gallery a {
+    break-inside: avoid;
+    text-decoration: none;
+}
+
+.gallery img {
+    max-width: 100%;
+    display: block;
+}
 
 
 
