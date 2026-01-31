@@ -184,7 +184,7 @@ html {
 
 .single-column-gallery {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     gap: 1.25%;
     margin:  0;
     place-items: center;
