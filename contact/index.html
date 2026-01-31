@@ -195,6 +195,16 @@ html {
     place-items: center;
 }
 
+.gallery a {
+    break-inside: avoid;
+    text-decoration: none;
+}
+
+.gallery img {
+    max-width: 100%;
+    display: block;
+}
+
 .single-column-gallery {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -203,12 +213,12 @@ html {
     place-items: center;
 }
 
-.gallery a {
+.single-column-gallery a {
     break-inside: avoid;
     text-decoration: none;
 }
 
-.gallery img {
+.single-column-gallery img {
     max-width: 100%;
     display: block;
 }
