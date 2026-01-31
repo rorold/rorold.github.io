@@ -68,6 +68,31 @@ a[href]:active {
 	navigation: auto;
 }
 
+@media all and (max-width: 550px) {
+  
+  html,
+  body {
+    width:330px
+  }
+}
+
+@media all and (min-width: 551px) and (max-width: 800px){
+  
+  html,
+  body {
+    width:520px
+  }
+}
+
+
+@media all and (min-width: 801px) {
+  
+  html,
+  body {
+    width:640px
+  }
+}
+
 html,
 body {
 	padding: 0;
@@ -75,8 +100,8 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
-  width:40em
 }
+
 html {
 	overflow-y: scroll;
 }
@@ -96,7 +121,7 @@ html {
 /* Nav */
 .nav {
 	display: flex;
-	gap: .5em 1em;
+	gap: 3%;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -165,7 +190,7 @@ html {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 1.25%;
     margin:  0;
     place-items: center;
 }
@@ -173,7 +198,7 @@ html {
 .single-column-gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 1.25%;
     margin:  0;
     place-items: center;
 }
@@ -228,21 +253,24 @@ html {
 /* Left border */
 .leftborder {
   display: inline-block;
-  gap: .5em 1em;
   align-items: left;
   vertical-align:top;
   justify-content: left;
-  width: 3.5em;
+  width: 10%;
 }
+
+.border_img {
+  width: 100%;
+}
+
 
 /* page content */
 .pagecontent{
   display: inline-block;
-  gap: .5em 1em;
   align-items: left;
   vertical-align:top;
   text-align: center;
-  width: 35em;
+  width: 87%;
 }
 </style>
   <style>/*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
@@ -716,23 +744,15 @@ div.pswp__img--placeholder,
           
     </ul>
   </nav>
-	  
 	<div class="leftborder">
-	  <img class="leftborder" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
+    <img class="border_img" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 	</div>
-
-
-
-
-	<div class="pagecontent">
-
-	    <p>I originally studied physics at university, graduating in 2010, and then worked as a software engineer for 14 years.
+  <div class="pagecontent">
+    <p>I originally studied physics at university, graduating in 2010, and then worked as a software engineer for 14 years.
 <p>I have been playing octave mandolin in folk sessions around Oxford for over 10 years, and various other stringed instruments for years before that. Being something of a nerd and a tinkerer, I've been experimenting with the setups, tunings and string gauges of my own instruments for about as long as I've been playing them.<p>
 <p>I'm now studying musical instrument making at West Dean College and have completed the first year of a two-year FdA course.</p>
 <p>I'm based in Oxford and have a particular interest in fretted folk instruments (Cittern, Bouzouki, Octave Mandolin and similar) and in the Viola da Gamba and other early bowed strings.</p>
-
 	</div>
-	
 	<div class="footer">
 	  <p>Copyright © Rory Morrison 2026</p>
 	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2 and photoswipe v5.4.4</p>
