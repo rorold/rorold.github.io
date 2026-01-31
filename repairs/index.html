@@ -167,6 +167,15 @@ html {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin:  0;
+    place-items: center;
+}
+
+.single-column-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin:  0;
+    place-items: center;
 }
 
 .gallery a {
@@ -178,6 +187,29 @@ html {
     max-width: 100%;
     display: block;
 }
+
+/* Lightbox captions */
+.pswp__custom-caption {
+  background: var(--color-gray-90);
+  font-size: 24px;
+  color: var(--color-gray-20);
+  
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
 
 
 
@@ -209,7 +241,7 @@ html {
   gap: .5em 1em;
   align-items: left;
   vertical-align:top;
-  justify-content: left;
+  text-align: center;
   width: 35em;
 }
 </style>
@@ -695,17 +727,91 @@ div.pswp__img--placeholder,
 	<div class="pagecontent">
 
 	    <p/>I am happy to undertake repair and setup work, particularly for mandolin/bouzouki family instruments, viol family instruments, or any especially weird or unusual folk or early instruments you may have. If I do not have the expertise or specialist equipment required I can also direct you to other local repairers around Oxford.
+<p/>Below are some photos of recent repair work.
 <p/>
-<p/>
-<h3>Example before, in progress, and after photos of a mandola refret</h3>
-<p><div>            <div class="gallery" id="gallery-Mandola_Refret">                        <a href="/gen/zFyxm7f1al-1200.jpeg"         data-pswp-width="1200"         data-pswp-height="1600"         target="_blank">            <img src="/gen/zFyxm7f1al-192.jpeg" alt="low spots on the fingerboard" />        </a>            <a href="/gen/11EnYfV-3m-1200.jpeg"         data-pswp-width="1200"         data-pswp-height="1600"         target="_blank">            <img src="/gen/11EnYfV-3m-192.jpeg" alt="worn frets in need of levelling" />        </a>            <a href="/gen/kqwyE5pZYw-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/kqwyE5pZYw-192.jpeg" alt="old frets removed and fingerboard levelled" />        </a>            <a href="/gen/yQUbiFhXid-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/yQUbiFhXid-192.jpeg" alt="new frets, not yet crowned or dressed" />        </a>            <a href="/gen/aPd30ESBAJ-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/aPd30ESBAJ-192.jpeg" alt="frets finished and all strung up" />        </a>                </div>            <script type="module">                import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';                import PhotoSwipe from '/js/photoswipe.esm.min.js';                const lightbox = new PhotoSwipeLightbox({                    gallery: '#gallery-Mandola_Refret',                    children: 'a',                    pswpModule: PhotoSwipe,                    preload: [1, 1]                });                lightbox.init();            </script>        </div></p>
+<h3>Tenor mandola refret</h3>
+<p><div>
+<div class="gallery" id="gallery-Tenor_Mandola_Refret">
+<a href="/gen/kqwyE5pZYw-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/kqwyE5pZYw-192.jpeg" alt="The old frets removed and the fingerboard levelled" />        </a>            <a href="/gen/yQUbiFhXid-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/yQUbiFhXid-192.jpeg" alt="New frets put in, not yet crowned or dressed" />        </a>            <a href="/gen/aPd30ESBAJ-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/aPd30ESBAJ-192.jpeg" alt="Fret work finished and all strung up" />        </a><br>
+</div>
+<script type="module">
+import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+import PhotoSwipe from '/js/photoswipe.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+gallery: '#gallery-Tenor_Mandola_Refret',
+children: 'a',
+pswpModule: PhotoSwipe,
+preload: [1, 1]
+});
+// caption code from https://photoswipe.com/caption/
+lightbox.on('uiRegister', function() {
+lightbox.pswp.ui.registerElement({
+name: 'custom-caption',
+order: 9,
+isButton: false,
+appendTo: 'root',
+html: 'Caption text',
+onInit: function init(el, pswp) {
+lightbox.pswp.on('change', function () {
+const currSlideElement = lightbox.pswp.currSlide.data.element;
+let captionHTML = '';
+if (currSlideElement) {
+// get caption from alt attribute
+captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+}
+el.innerHTML = captionHTML || '';
+});
+}
+});
+});
+lightbox.init();
+</script>
+</div></p>
+<h3>Mandolin repair</h3>
+<p><div>
+<div class="gallery" id="gallery-Mandolin_Repair">
+<a href="/gen/1iwFHLofHA-720.jpeg"         data-pswp-width="720"         data-pswp-height="1193"         target="_blank">            <img src="/gen/1iwFHLofHA-192.jpeg" alt="Fingerboard removed before re-gluing the headstock join" />        </a>            <a href="/gen/ctP5iUAGkb-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/ctP5iUAGkb-192.jpeg" alt="Adding a spruce wedge to flatten out the transition between neck and body" />        </a>            <a href="/gen/oajCZ1rL35-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/oajCZ1rL35-192.jpeg" alt="A new fingerboard with simple brass inlay dots" />        </a>            <a href="/gen/5035MYxfZA-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="1038"         target="_blank">            <img src="/gen/5035MYxfZA-192.jpeg" alt="Hardware and strings back on, and ready to play" />        </a><br>
+</div>
+<script type="module">
+import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+import PhotoSwipe from '/js/photoswipe.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+gallery: '#gallery-Mandolin_Repair',
+children: 'a',
+pswpModule: PhotoSwipe,
+preload: [1, 1]
+});
+// caption code from https://photoswipe.com/caption/
+lightbox.on('uiRegister', function() {
+lightbox.pswp.ui.registerElement({
+name: 'custom-caption',
+order: 9,
+isButton: false,
+appendTo: 'root',
+html: 'Caption text',
+onInit: function init(el, pswp) {
+lightbox.pswp.on('change', function () {
+const currSlideElement = lightbox.pswp.currSlide.data.element;
+let captionHTML = '';
+if (currSlideElement) {
+// get caption from alt attribute
+captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+}
+el.innerHTML = captionHTML || '';
+});
+}
+});
+});
+lightbox.init();
+</script>
+</div></p>
 
 
 	</div>
 	
 	<div class="footer">
-	  <p>Copyright © Rory Morrison 2025</p>
-	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+	  <p>Copyright © Rory Morrison 2026</p>
+	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2 and photoswipe v5.4.4</p>
 	</div>
   </body>
 </html>

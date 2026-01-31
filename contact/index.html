@@ -167,6 +167,15 @@ html {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     margin:  0;
+    place-items: center;
+}
+
+.single-column-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin:  0;
+    place-items: center;
 }
 
 .gallery a {
@@ -178,6 +187,29 @@ html {
     max-width: 100%;
     display: block;
 }
+
+/* Lightbox captions */
+.pswp__custom-caption {
+  background: var(--color-gray-90);
+  font-size: 24px;
+  color: var(--color-gray-20);
+  
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
 
 
 
@@ -209,7 +241,7 @@ html {
   gap: .5em 1em;
   align-items: left;
   vertical-align:top;
-  justify-content: left;
+  text-align: center;
   width: 35em;
 }
 </style>
@@ -700,8 +732,8 @@ div.pswp__img--placeholder,
 	</div>
 	
 	<div class="footer">
-	  <p>Copyright © Rory Morrison 2025</p>
-	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2</p>
+	  <p>Copyright © Rory Morrison 2026</p>
+	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2 and photoswipe v5.4.4</p>
 	</div>
   </body>
 </html>
