@@ -35,7 +35,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode('singleColumnGalleryImage', singleColumnGalleryImageShortcode);
   eleventyConfig.addPairedLiquidShortcode('gallery', galleryShortcode);
   eleventyConfig.addPairedLiquidShortcode('singleColumnGallery', singleColumnGalleryShortcode);
-
 };
 
 function galleryShortcode(content, name) {
