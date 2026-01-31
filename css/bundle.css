@@ -55,6 +55,31 @@ a[href]:active {
 	navigation: auto;
 }
 
+@media all and (max-width: 550px) {
+  
+  html,
+  body {
+    width:330px
+  }
+}
+
+@media all and (min-width: 551px) and (max-width: 800px){
+  
+  html,
+  body {
+    width:520px
+  }
+}
+
+
+@media all and (min-width: 801px) {
+  
+  html,
+  body {
+    width:640px
+  }
+}
+
 html,
 body {
 	padding: 0;
@@ -62,8 +87,8 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
-  width:40em
 }
+
 html {
 	overflow-y: scroll;
 }
@@ -83,7 +108,7 @@ html {
 /* Nav */
 .nav {
 	display: flex;
-	gap: .5em 1em;
+	gap: 3%;
 	padding: 0;
 	margin: 0;
 	list-style: none;
@@ -152,7 +177,7 @@ html {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 1.25%;
     margin:  0;
     place-items: center;
 }
@@ -160,7 +185,7 @@ html {
 .single-column-gallery {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 1.25%;
     margin:  0;
     place-items: center;
 }
@@ -215,19 +240,22 @@ html {
 /* Left border */
 .leftborder {
   display: inline-block;
-  gap: .5em 1em;
   align-items: left;
   vertical-align:top;
   justify-content: left;
-  width: 3.5em;
+  width: 10%;
 }
+
+.border_img {
+  width: 100%;
+}
+
 
 /* page content */
 .pagecontent{
   display: inline-block;
-  gap: .5em 1em;
   align-items: left;
   vertical-align:top;
   text-align: center;
-  width: 35em;
+  width: 87%;
 }

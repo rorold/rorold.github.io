@@ -5,7 +5,7 @@ import sharp from 'sharp';
 import Image from '@11ty/eleventy-img';
 
 const GALLERY_IMAGE_WIDTH = 192;
-const GALLERY_IMAGE_WIDTH__LARGE = 384;
+const GALLERY_IMAGE_WIDTH__LARGE = 350;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 2000;
 const PORTRAIT_LIGHTBOX_IMAGE_WIDTH = 720;
 
