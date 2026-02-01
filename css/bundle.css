@@ -57,8 +57,8 @@ a[href]:active {
   
   html,
   body {
-    width:330px;
-    font-size: 80%;
+    width:350px;
+    font-size: 93%;
 
   }
 }
@@ -68,7 +68,7 @@ a[href]:active {
   html,
   body {
     width:520px;
-    font-size: 100%;
+    font-size: 113%;
   }
 }
 
@@ -78,7 +78,7 @@ a[href]:active {
   html,
   body {
     width:640px;
-    font-size: 112%;
+    font-size: 125%;
 
   }
 }
@@ -88,7 +88,7 @@ a[href]:active {
   html,
   body {
     width:730px;
-    font-size: 119%;
+    font-size: 134%;
   }
 }
 
@@ -236,7 +236,7 @@ html {
 /* Lightbox captions */
 .pswp__custom-caption {
   background: #222;
-  font-size: 1.75em;
+  font-size: 1em;
   color: var(--color-gray-20);
   
   width: calc(100% - 32px);
