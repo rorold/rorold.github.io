@@ -57,7 +57,9 @@ a[href]:active {
   
   html,
   body {
-    width:330px
+    width:330px;
+    font-size: 80%;
+
   }
 }
 
@@ -65,16 +67,28 @@ a[href]:active {
   
   html,
   body {
-    width:520px
+    width:520px;
+    font-size: 100%;
   }
 }
 
 
-@media all and (min-width: 801px) {
+@media all and (min-width: 801px) and (max-width: 1000px) {
   
   html,
   body {
-    width:640px
+    width:640px;
+    font-size: 112%;
+
+  }
+}
+
+@media all and (min-width: 1001px) {
+  
+  html,
+  body {
+    width:730px;
+    font-size: 119%;
   }
 }
 
@@ -221,8 +235,8 @@ html {
 
 /* Lightbox captions */
 .pswp__custom-caption {
-  background: var(--color-gray-90);
-  font-size: 24px;
+  background: #222;
+  font-size: 1.75em;
   color: var(--color-gray-20);
   
   width: calc(100% - 32px);
@@ -231,7 +245,7 @@ html {
   border-radius: 4px;
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 3%;
   transform: translateX(-50%);
 }
 .pswp__custom-caption a {
@@ -246,9 +260,11 @@ html {
 
 .header {
   text-align: center;
+  font-size: 2em;
 }
 .subheader {
   text-align: center;
+  font-size: 1.5em;
 }
 
 .footer {
