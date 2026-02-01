@@ -11,11 +11,12 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+	--background-color: #ffffff;
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color-link: var(--color-gray-90);
+	--text-color-link-active: var(--color-gray-90);
+	--text-color-link-visited: var(--color-gray-90);
 
 	--syntax-tab-size: 2;
 }
@@ -27,11 +28,8 @@
 		--color-gray-90: #dad8d8;
 
 		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
 
-		--background-color: #15202b;
+    --background-color: #222;
 	}
 }
 
@@ -143,17 +141,28 @@ html {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
   z-index: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,.8);
+    z-index: 1;
+  }
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  color: var(--text-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
+
 
 .dropdown-content a[href]:not(:hover) {
 	text-decoration: none;
