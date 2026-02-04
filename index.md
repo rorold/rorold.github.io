@@ -6,7 +6,7 @@ eleventyNavigation:
 layout: layout.njk
 ---
 <p>Rory Morrison is a maker, repairer and amateur player of fretted folk instruments (Cittern, Bouzouki, Octave Mandolin and similar) and Viola da Gamba and other early bowed strings.</p>
-
+<p>Please get in contact if you have any repair work you need doing or to discuss commissions, particulary for unusual or unique stringed instruments.</p>
 {% singleColumnGallery "In_The_Workshop" %}
 {% singleColumnGalleryImage "./img/in_the_workshop.jpg", "Rory in the first year workshop at West Dean College" %}
 {% endsingleColumnGallery %}
