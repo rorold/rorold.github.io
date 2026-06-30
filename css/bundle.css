@@ -57,7 +57,7 @@ a[href]:active {
   
   html,
   body {
-    width:350px;
+    width:400px;
     font-size: 93%;
 
   }
@@ -67,7 +67,7 @@ a[href]:active {
   
   html,
   body {
-    width:520px;
+    width:530px;
     font-size: 113%;
   }
 }
@@ -77,7 +77,7 @@ a[href]:active {
   
   html,
   body {
-    width:680px;
+    width:760px;
     font-size: 125%;
 
   }
@@ -88,7 +88,7 @@ a[href]:active {
   
   html,
   body {
-    width:850px;
+    width:950px;
     font-size: 134%;
   }
 }
@@ -282,6 +282,15 @@ html {
   width: 10%;
 }
 
+/* Right border */
+.rightborder {
+  display: inline-block;
+  align-items: right;
+  vertical-align:top;
+  justify-content: right;
+  width: 10%;
+}
+
 .border_img {
   width: 100%;
 }
@@ -293,5 +302,5 @@ html {
   align-items: left;
   vertical-align:top;
   text-align: center;
-  width: 87%;
+  width: 75%;
 }
