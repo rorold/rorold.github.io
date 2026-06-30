@@ -70,7 +70,7 @@ a[href]:active {
   
   html,
   body {
-    width:350px;
+    width:400px;
     font-size: 93%;
 
   }
@@ -80,7 +80,7 @@ a[href]:active {
   
   html,
   body {
-    width:520px;
+    width:530px;
     font-size: 113%;
   }
 }
@@ -90,7 +90,7 @@ a[href]:active {
   
   html,
   body {
-    width:680px;
+    width:760px;
     font-size: 125%;
 
   }
@@ -101,7 +101,7 @@ a[href]:active {
   
   html,
   body {
-    width:850px;
+    width:950px;
     font-size: 134%;
   }
 }
@@ -295,6 +295,15 @@ html {
   width: 10%;
 }
 
+/* Right border */
+.rightborder {
+  display: inline-block;
+  align-items: right;
+  vertical-align:top;
+  justify-content: right;
+  width: 10%;
+}
+
 .border_img {
   width: 100%;
 }
@@ -306,7 +315,7 @@ html {
   align-items: left;
   vertical-align:top;
   text-align: center;
-  width: 87%;
+  width: 75%;
 }
 </style>
   <style>/*! PhotoSwipe main CSS by Dmytro Semenov | photoswipe.com */
@@ -733,7 +742,7 @@ div.pswp__img--placeholder,
   </head>
   <body>
     <h1 class="header"> R. P. F. Morrison </h1>
-	<h3 class="subheader"> Folk and Early Stringed Instruments </h1>
+	<h3 class="subheader"> Folk and Historical Stringed Instruments </h1>
   <nav>
     <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
@@ -780,21 +789,23 @@ div.pswp__img--placeholder,
           
     </ul>
   </nav>
+  
 	<div class="leftborder">
     <img class="border_img" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 	</div>
+  
   <div class="pagecontent">
-    <p>I am currently working on a guitar-bodied archtop octave mandolin. It features a soundboard made with bent staves following the same method as historical viols, and a jointed back made from cherry and sycamore.</p>
+    <p>I recently made a guitar-bodied archtop octave mandolin. It features a soundboard made with bent staves following the same method as historical viols, and a jointed back made from cherry and sycamore.</p>
 <p>The outline is taken from an Epiphone Spartan archtop guitar, scaled down to fit a scale length of just over 23".</p>
 <p><div>
-<div class="gallery" id="gallery-Octave_Mandolin_Wip">
-<a href="/gen/EaaVV4Djlq-720.jpeg"         data-pswp-width="720"         data-pswp-height="769"         target="_blank">            <img src="/gen/EaaVV4Djlq-192.jpeg" alt="The back showing jointed strips of sycamore and cherry" />        </a>            <a href="/gen/v4OehygLg5-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/v4OehygLg5-192.jpeg" alt="Closeup of the inside of the back showing the braces and reinforcement cleats" />        </a>            <a href="/gen/XQ99FsA3bH-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="1500"         target="_blank">            <img src="/gen/XQ99FsA3bH-192.jpeg" alt="The back and ribs together showing the inside of the body" />        </a>            <a href="/gen/Ybn_MR1xva-720.jpeg"         data-pswp-width="720"         data-pswp-height="821"         target="_blank">            <img src="/gen/Ybn_MR1xva-192.jpeg" alt="The front with f-holes cut out" />        </a><br>
+<div class="gallery" id="gallery-Octave_Mandolin">
+<!-- ToDo: take these photos!        <a href="/gen/EaaVV4Djlq-720.jpeg"         data-pswp-width="720"         data-pswp-height="769"         target="_blank">            <img src="/gen/EaaVV4Djlq-192.jpeg" alt="The finished instrument" />        </a>            <a href="/gen/EaaVV4Djlq-720.jpeg"         data-pswp-width="720"         data-pswp-height="769"         target="_blank">            <img src="/gen/EaaVV4Djlq-192.jpeg" alt="Stencil on the soundboard" />        </a>            <a href="/gen/EaaVV4Djlq-720.jpeg"         data-pswp-width="720"         data-pswp-height="769"         target="_blank">            <img src="/gen/EaaVV4Djlq-192.jpeg" alt="Inlaid marquetry on the headstock" />        </a>    -->        <a href="/gen/EaaVV4Djlq-720.jpeg"         data-pswp-width="720"         data-pswp-height="769"         target="_blank">            <img src="/gen/EaaVV4Djlq-192.jpeg" alt="The back showing jointed strips of sycamore and cherry" />        </a>            <a href="/gen/v4OehygLg5-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/v4OehygLg5-192.jpeg" alt="Closeup of the inside of the back showing the braces and reinforcement cleats" />        </a>            <a href="/gen/XQ99FsA3bH-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="1500"         target="_blank">            <img src="/gen/XQ99FsA3bH-192.jpeg" alt="The back and ribs together showing the inside of the body" />        </a>            <a href="/gen/Ybn_MR1xva-720.jpeg"         data-pswp-width="720"         data-pswp-height="821"         target="_blank">            <img src="/gen/Ybn_MR1xva-192.jpeg" alt="The front with f-holes cut out" />        </a><br>
 </div>
 <script type="module">
 import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
 import PhotoSwipe from '/js/photoswipe.esm.min.js';
 const lightbox = new PhotoSwipeLightbox({
-gallery: '#gallery-Octave_Mandolin_Wip',
+gallery: '#gallery-Octave_Mandolin',
 children: 'a',
 pswpModule: PhotoSwipe,
 preload: [1, 1]
@@ -825,6 +836,11 @@ lightbox.init();
 </div></p>
 
 	</div>
+  
+  <div class="rightborder">
+    <img class="border_img" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
+	</div>
+  
 	<div class="footer">
 	  <p>Copyright © Rory Morrison 2026</p>
 	  <p>Hosted with GitHub Pages, built with 11ty v3.1.2 and photoswipe v5.4.4</p>
