@@ -1,7 +1,7 @@
 ---
 eleventyNavigation:
   key: Contact
-  order: 5
+  order: 6
   
 layout: layout.njk
 ---
