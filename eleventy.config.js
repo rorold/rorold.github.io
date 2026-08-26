@@ -18,6 +18,8 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("img");
   	// Copy `js/` to `_site/js/`
 	eleventyConfig.addPassthroughCopy("js");
+  // copy `assets/` to `_site/assets/`
+  eleventyConfig.addPassthroughCopy("assets");
 
 	// Copy any .jpg file to `_site`, via Glob pattern
 	// Keeps the same directory structure.

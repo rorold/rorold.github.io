@@ -7,6 +7,8 @@ layout: layout.njk
 ---
 
 <p/>I am happy to undertake repair and setup work, particularly for mandolin/bouzouki family instruments, viol family instruments, or any especially weird or unusual folk or early instruments you may have. If I do not have the expertise or specialist equipment required I can also direct you to other local repairers around Oxford.
+
+For information on pricing, click <a href="/assets/price_list.pdf">here</a>.
 <p/>Below are some photos of recent repair work.
 <p/>
 <h3>Tenor mandola refret</h3>
