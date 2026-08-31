@@ -18,3 +18,5 @@ layout: layout.njk
 {% galleryImage "./img/om_back_bracing.jpg", "Closeup of the inside of the back showing the braces and reinforcement cleats" %}
 {% galleryImage "./img/om_back_and_ribs.jpg", "The back and ribs together showing the inside of the body" %}
 {% endgallery %}
+
+While this instrument is not for sale, I am currently working on a design for a mandolin with a similar aesthetic and a simpler version of the same construction.
