@@ -802,6 +802,85 @@ div.pswp__img--placeholder,
   
   <div class="pagecontent">
     <p>From time to time I will list available instruments here, either stock I have made on spec or second hand instruments that I have repaired and set up. If you don't see what you are looking for you are welcome to contact me about a commission.</p>
+<h3>Ashbury Tenor Mandola - £300</h3>
+<p><div>
+<div class="gallery" id="gallery-ashbury_mandola">
+<a href="/gen/dwsiuJQZhP-720.jpeg"         data-pswp-width="720"         data-pswp-height="1269"         target="_blank">            <img src="/gen/dwsiuJQZhP-192.jpeg" alt="Ashbury tenor mandola" />        </a>            <a href="/gen/4Ou-oGj4SN-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="2672"         target="_blank">            <img src="/gen/4Ou-oGj4SN-192.jpeg" alt="Ashbury tenor mandola label inside the sound hole" />        </a>            <a href="/gen/_mnOvdboRA-720.jpeg"         data-pswp-width="720"         data-pswp-height="740"         target="_blank">            <img src="/gen/_mnOvdboRA-192.jpeg" alt="Ashbury tenor mandola back view" />        </a><br>
+</div>
+<script type="module">
+import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+import PhotoSwipe from '/js/photoswipe.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+gallery: '#gallery-ashbury_mandola',
+children: 'a',
+pswpModule: PhotoSwipe,
+preload: [1, 1]
+});
+// caption code from https://photoswipe.com/caption/
+lightbox.on('uiRegister', function() {
+lightbox.pswp.ui.registerElement({
+name: 'custom-caption',
+order: 9,
+isButton: false,
+appendTo: 'root',
+html: 'Caption text',
+onInit: function init(el, pswp) {
+lightbox.pswp.on('change', function () {
+const currSlideElement = lightbox.pswp.currSlide.data.element;
+let captionHTML = '';
+if (currSlideElement) {
+// get caption from alt attribute
+captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+}
+el.innerHTML = captionHTML || '';
+});
+}
+});
+});
+lightbox.init();
+</script>
+</div>
+Originally an octave mandolin, with a scale length of about 20&quot;. I bought this second hand and played it for many years, but found the scale length a bit too short for me, particularly to support the low g course. I gave it a full re-fret along with some other repairs back in January 2026, and decided to string it up CGDA as a mandola instead.</p>
+<p/>
+<h3>Tenor banjo hard case - £75</h3>
+<p><div>
+<div class="gallery" id="gallery-banjo_hard_case">
+<a href="/gen/oXgWu-mWrf-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="957"         target="_blank">            <img src="/gen/oXgWu-mWrf-192.jpeg" alt="Banjo case - ouside" />        </a>            <a href="/gen/qzFjOgEKuk-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="1496"         target="_blank">            <img src="/gen/qzFjOgEKuk-192.jpeg" alt="Banjo case - inside the main body" />        </a>            <a href="/gen/mvHgKQiNkd-2000.jpeg"         data-pswp-width="2000"         data-pswp-height="1171"         target="_blank">            <img src="/gen/mvHgKQiNkd-192.jpeg" alt="Banjo case - inside the neck section" />        </a><br>
+</div>
+<script type="module">
+import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+import PhotoSwipe from '/js/photoswipe.esm.min.js';
+const lightbox = new PhotoSwipeLightbox({
+gallery: '#gallery-banjo_hard_case',
+children: 'a',
+pswpModule: PhotoSwipe,
+preload: [1, 1]
+});
+// caption code from https://photoswipe.com/caption/
+lightbox.on('uiRegister', function() {
+lightbox.pswp.ui.registerElement({
+name: 'custom-caption',
+order: 9,
+isButton: false,
+appendTo: 'root',
+html: 'Caption text',
+onInit: function init(el, pswp) {
+lightbox.pswp.on('change', function () {
+const currSlideElement = lightbox.pswp.currSlide.data.element;
+let captionHTML = '';
+if (currSlideElement) {
+// get caption from alt attribute
+captionHTML = currSlideElement.querySelector('img').getAttribute('alt');
+}
+el.innerHTML = captionHTML || '';
+});
+}
+});
+});
+lightbox.init();
+</script>
+</div>
+While this is intended as a tenor banjo case, it fits the Ashbury mandola above very well (I believe I bought them together) - I'd sell both together for £350.</p>
 
 	</div>
   
