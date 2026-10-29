@@ -37,6 +37,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addLiquidShortcode('singleColumnGalleryImage', singleColumnGalleryImageShortcode);
   eleventyConfig.addPairedLiquidShortcode('gallery', galleryShortcode);
   eleventyConfig.addPairedLiquidShortcode('singleColumnGallery', singleColumnGalleryShortcode);
+  
+  eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
+  
+  const english = new Intl.DateTimeFormat("en-UK");
+  eleventyConfig.addFilter("niceDate", function(d) {
+    return english.format(d);
+  });
 };
 
 function galleryShortcode(content, name) {
@@ -192,4 +199,14 @@ async function singleColumnGalleryImageShortcode(src, alt) {
         </a>
         <a></a>
     `.replace(/(\r\n|\n|\r)/gm, "");
+}
+
+
+function extractExcerpt(post) {
+  if(!post.templateContent) return '';
+  if(post.templateContent.indexOf('</p>') > 0) {
+    let end = post.templateContent.indexOf('</p>');
+    return post.templateContent.substr(0, end+4);
+  }
+  return post.templateContent;
 }

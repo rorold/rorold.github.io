@@ -20,7 +20,7 @@ subtitle: Folk and Historical Stringed Instruments
   </head>
   <body>
     <h1 class="header"> {{ title }} </h1>
-	<h3 class="subheader"> {{ subtitle }} </h1>
+	<h3 class="subheader"> {{ subtitle }} </h3>
   <nav>
     <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
@@ -59,8 +59,9 @@ subtitle: Folk and Historical Stringed Instruments
 	<div class="leftborder">
     <img class="border_img" loading="lazy" decoding="async" src="/img/vine_border_scaled.png" alt="decorative border"/>
 	</div>
-  
+
   <div class="pagecontent">
+    <h3> {{page_title | safe}} </h3>
     {{ content | safe }}
 	</div>
   
